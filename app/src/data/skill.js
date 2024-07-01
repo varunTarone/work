@@ -12,7 +12,16 @@ import {
     IconBrandMongodb,
     IconJetpack,
     IconBrandAws,
-    IconBrandTypescript
+    IconBrandTypescript,
+    IconWashMachine,
+    IconBrain,
+    IconPower,
+    IconApi,
+    IconFilePower,
+    IconTable,
+    IconMoodNeutralFilled,
+    IconDeviceDesktopExclamation,
+    IconDeviceIpadCog
 } from '@tabler/icons-react'
 
 export const skill = {
@@ -59,7 +68,7 @@ export const skill = {
             },
             {
                 logo: <IconBrandNodejs />,
-                text: "Express"
+                text: "Node.js"
             },
             {
                 logo: <IconBrandTailwind />,
@@ -76,6 +85,26 @@ export const skill = {
             {
                 logo: <IconBrandAws />,
                 text: "AWS"
+            },
+            {
+                logo: <IconBrain />,
+                text: "Tensorflow"
+            },
+            {
+                logo: <IconFilePower />,
+                text: "PowerBI"
+            },
+            {
+                logo: <IconApi />,
+                text: "Postman"
+            },
+            {
+                logo: <IconTable />,
+                text: "Tableau"
+            },
+            {
+                logo: <IconDeviceIpadCog />,
+                text: "Netlify"
             }
         ]
     }

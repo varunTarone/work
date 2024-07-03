@@ -17,7 +17,7 @@ const JetBrains = JetBrains_Mono({
 
 const Contacts = () => {
   return (
-    <div className='mb-10 relative flex flex-col h-full w-[95vw] items-center justify-center bg-background p-20 '>
+    <div className='relative flex flex-col h-full w-[95vw] items-center justify-center bg-background p-10 '>
       <Title title='Contact' description='Get in Touch' />
       <h2 className="font-semibold text-xl text-neutral-800 dark:text-neutral-500 text-center">
         Want to chat? Just shoot me an email
@@ -25,7 +25,7 @@ const Contacts = () => {
       <SignupForm />
       <RetroGrid />
       <BlurFade duration={0.3} delay={0.3}>
-      <div className="flex flex-col mt-12 md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 z-10">
+      <div className="flex flex-col mt-20 md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 z-10">
         <HoverBorderGradient
           containerClassName="rounded-full"
           as="button"

@@ -1,5 +1,4 @@
 import React from 'react'
-import Title from './Title'
 import { text } from '@/data/about';
 import { motion } from 'framer-motion';
 import { JetBrains_Mono } from "next/font/google";

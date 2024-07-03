@@ -4,6 +4,7 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import ShineBorder from "./shine-border";
 import { cn } from "@/utils/cn";
+import { Textarea } from "./text-area";
 
 export function SignupForm() {
 
@@ -23,16 +24,27 @@ export function SignupForm() {
     });
 
     const data = response;
+
+    if (data) {
+      setResult("Mail SUCCESSFULLY sent!");
+      event.target.reset();
+      alert("Mail SUCCESSFULLY sent!");
+    } else {
+      console.log("Error", data);
+      setResult(data);
+    }
+
   };
 
   return (
     <ShineBorder
-    className="mt-5"
+    className="mt-10"
     color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
     >
     <div className="rounded-xl max-w-md w-[60vw] mx-auto md:rounded-2xl p-4 md:p-2 shadow-input bg-white dark:bg-black z-10">
 
       <form className="my-10" onSubmit={onSubmit}>
+        <Input type="hidden" name="subject" value="Mail from Portfolio Form" />
         <div className="flex flex-col w-full md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="fullname">Full Name</Label>
@@ -43,10 +55,10 @@ export function SignupForm() {
           <Label htmlFor="email">Email Address</Label>
           <Input id="email" name="email" placeholder="projectmayhem@fc.com" autoComplete="on" type="email" required />
         </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
+        <div className="space-y-2 mb-4">
           <Label htmlFor="message">Message</Label>
-          <Input id="message" name="message" placeholder="Short message..." type="text" required />
-        </LabelInputContainer>
+          <Textarea id="message" name="message" placeholder="Message..." required/>
+        </div>
         <button
           className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"

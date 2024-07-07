@@ -41,13 +41,16 @@ export const Particles: React.FC<ParticlesProps> = ({
   containerRef,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const canvasContainerRef = containerRef || useRef<HTMLDivElement>(null);
+  const defaultContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
   const circles = useRef<any[]>([]);
   const mousePosition = MousePosition();
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
+
+  // Use containerRef if provided, otherwise use defaultContainerRef
+  const canvasContainerRef = containerRef || defaultContainerRef;
 
   useEffect(() => {
     if (canvasRef.current) {

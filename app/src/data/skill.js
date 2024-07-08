@@ -25,7 +25,7 @@ import {
 } from '@tabler/icons-react'
 
 export const skill = {
-    elements1:[  
+    elements:[  
             {
                 logo: <IconCodePlus />,
                 text: "C++"
@@ -81,10 +81,6 @@ export const skill = {
             {
                 logo: <IconBrandMongodb />,
                 text: "MongoDB"
-            },
-            {
-                logo: <IconBrandAws />,
-                text: "AWS"
             },
             {
                 logo: <IconBrain />,

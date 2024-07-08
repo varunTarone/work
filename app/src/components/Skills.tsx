@@ -11,7 +11,7 @@ const Skills = () => {
       During my coding journey, I came accross multiple languages, frameworks and tools.
       </h2>
       <div className='pt-10 grid md:grid-cols-4 grid-cols-2 gap-10'>
-        {skill.elements1.map((element, index) => {
+        {skill.elements.map((element, index) => {
           return (
           <div key={index}>
             <Button  text={element.text} logo={element.logo} />

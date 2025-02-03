@@ -1,5 +1,12 @@
 export const project = [
     {
+        heading: 'Sumz',
+        description: 'An AI-powered summarizer that can summarize any article into a few sentences.',
+        live:'https://summarizeart.netlify.app/',
+        code:'https://github.com/varunTarone/Sumz',
+        image: '/sumz.png'
+    },
+    {
         heading: 'BrainWave',
         description: 'A landing page designed for a multimedia AI chatbot SaaS using Vite, React framework and Tailwind CSS.',
         live:'https://brainwave-landing-rust.vercel.app/',
@@ -7,11 +14,11 @@ export const project = [
         image: '/brain.png'
     },
     {
-        heading: 'Sumz',
-        description: 'An AI-powered summarizer that can summarize any article into a few sentences.',
-        live:'https://summarizeart.netlify.app/',
-        code:'https://github.com/varunTarone/Sumz',
-        image: '/sumz.png'
+        heading: 'SaaS Landing Page',
+        description: 'A SaaS landing Page for productivity app made using framer library.',
+        live:'https://pro-saas-landing.vercel.app/',
+        code:'https://github.com/varunTarone/saas-landing',
+        image: '/saas.png'
     },
     {
         heading: 'RTC Chat',
